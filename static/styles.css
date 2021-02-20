@@ -1,0 +1,23 @@
+
+body{
+    background-color: blueviolet;
+}
+ul {
+    display:inline;
+    list-style: none;
+    text-align: center;
+}
+
+li{
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
+
+.white {
+    background-color: rgb(49, 46, 46);
+}
+
+.black {
+    background-color: #dfdedf;
+}

@@ -5,24 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MintBean Hackathon</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="static\styles.css">
 </head>
+<style>
+body{
+    background-color: antiquewhite;
+}
+#keyboard-container{
+
+}
+.key{
+    display: inline-block;
+    
+}
+.white {
+    background-color:#fff;
+    height:220px;
+    width: 100px;
+    z-index: 2;
+}
+
+.black {
+    background-color:  rgb(49, 46, 46);
+    height:160px;
+    width: 60px;
+    z-index: 4;
+}
+</style>
 <body>
 
     <div id="keyboard-container">
-        <ul>
-            <li class="white" id="C"></li>
-            <li class="black" id="C#"></li>
-            <li class="white" id="D"></li>
-            <li class="black" id="D#"></li>
-            <li class="white" id="E"></li>
-            <li class="white" id="F"></li>
-            <li class="black" id="F#"></li>
-            <li class="white" id="G"></li>
-            <li class="black" id="G#"></li>
-            <li class="white" id="A"></li>
-            <li class="black" id="A#"></li>
-            <li class="white" id="B"></li>
+        <div class= "key white" id="C"></div>
+        <div class= "key black" id="C#"></div>
+        <div class= "key white" id="D"></div>
+        <div class= "key black" id="D#"></div>
+        <div class= "key white" id="E"></div>
+        <div class= "key white" id="F"></div>
+        <div class= "key black" id="F#"></div>
+        <div class= "key white" id="G"></div>
+        <div class= "key black" id="G#"></div>
+        <div class= "key white" id="A"></div>
+        <div class= "key black" id="A#"></div>
+        <div class= "key white" id="B"></div>
+
         </ul>
     </div>
     
