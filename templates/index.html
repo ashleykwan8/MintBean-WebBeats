@@ -44,6 +44,8 @@ body{
     width: 40px;
     z-index: 2;
     border-radius: 0px 0px 10px 10px;
+    position: relative;
+   
 }
 .black:hover{
     filter: brightness(150%);
@@ -51,26 +53,39 @@ body{
 .black:active{
     transform: translate(0, 0.3rem);
     box-shadow: 0 0.1rem rgba(255, 255, 255, 0.65);
+    margin-left: 200px;
 }
+
+#C-sharp{
+    position: absolute;
+    display: block;
+    width: 40px;
+    margin-left: 60px;
+}
+
 </style>
 <body>
 
     <div id="keyboard-container">
         <div class= "key white" id="C"></div>
-        <div class= "key black" id="C#"></div>
         <div class= "key white" id="D"></div>
-        <div class= "key black" id="D#"></div>
         <div class= "key white" id="E"></div>
         <div class= "key white" id="F"></div>
-        <div class= "key black" id="F#"></div>
         <div class= "key white" id="G"></div>
-        <div class= "key black" id="G#"></div>
         <div class= "key white" id="A"></div>
-        <div class= "key black" id="A#"></div>
         <div class= "key white" id="B"></div>
+
+
+        <div class= "key black" id="C-sharp"></div>
+        <div class= "key black" id="D#"></div>
+        <div class= "key black" id="F#"></div>
+        <div class= "key black" id="G#"></div>
+        <div class= "key black" id="A#"></div>
+
 
         </ul>
     </div>
     
 </body>
 </html>
+
