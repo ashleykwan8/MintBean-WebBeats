@@ -1,6 +1,11 @@
-body {
-  background-color: blueviolet;
+#hi {
+  margin-top: 100px;
+  padding-bottom: 100px;
 }
+
+/* body {
+  background-color: blueviolet;
+} */
 ul {
   display: inline;
   list-style: none;
