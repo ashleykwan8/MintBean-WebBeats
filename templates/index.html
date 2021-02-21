@@ -1,76 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MintBean Hackathon</title>
-    <link rel="stylesheet" href="static\css\styles.css">
-<script src="static/js/script.js"></script></head>
-<style>
-body{
-    background-color: antiquewhite;
-}
-#keyboard-container{
-    display: flex;
-
-}
-.key{
-    display: inline-block;
-    position: relative;
-    box-shadow: 0 0.3rem rgba(121, 121, 121, .65);
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MintBean Hackathon</title>
+        <link rel="stylesheet" href="/static/css/styles.css">
     
+        
+    </head>
+    <body>
+        <p id= "hi"> HI</p>
+
+        <div id="keyboard-container">
     
-}
-.white {
-    background-color:#fff;
-    height:220px;
-    width: 80px;
-    z-index: 1;
-    border: 1px solid rgb(49, 46, 46) ;
-    border-radius: 0px 0px 10px 10px;
-}
-.white:hover{
-   filter: brightness(150%);
-}
-.white:active {
-    transform: translate(0, 0.3rem);
-    box-shadow: 0 0.1rem rgba(255, 255, 255, 0.65);
-}
+            <div class= "key white" id="C"></div>
+            <div class= "key white" id="D"></div>
+            <div class= "key white" id="E"></div>
+            <div class= "key white" id="F"></div>
+            <div class= "key white" id="G"></div>
+            <div class= "key white" id="A"></div>
+            <div class= "key white" id="B"></div>
 
-.black {
-    background-color:  rgb(54, 51, 51);
-    height:160px;
-    width: 40px;
-    z-index: 2;
-    border-radius: 0px 0px 10px 10px;
-}
-.black:hover{
-    filter: brightness(150%);
-}
-.black:active{
-    transform: translate(0, 0.3rem);
-    box-shadow: 0 0.1rem rgba(255, 255, 255, 0.65);
-}
-</style>
-<body>
 
-    <div id="keyboard-container">
-        <div class= "key white" id="C"></div>
-        <div class= "key black" id="C#"></div>
-        <div class= "key white" id="D"></div>
-        <div class= "key black" id="D#"></div>
-        <div class= "key white" id="E"></div>
-        <div class= "key white" id="F"></div>
-        <div class= "key black" id="F#"></div>
-        <div class= "key white" id="G"></div>
-        <div class= "key black" id="G#"></div>
-        <div class= "key white" id="A"></div>
-        <div class= "key black" id="A#"></div>
-        <div class= "key white" id="B"></div>
+            <div class= "key black" id="C-sharp"></div>
+            <div class= "key black" id="D-sharp"></div>
+            <div class= "key black" id="F-sharp"></div>
+            <div class= "key black" id="G-sharp"></div>
+            <div class= "key black" id="A-sharp"></div>
 
-        </ul>
-    </div>
-    
-</body>
+
+           
+        </div>
+
+        <!-- CDN for Tone.js -->
+        <script src="https://unpkg.com/tone@13.8.25/build/Tone.js"></script>
+        <!-- Javascript link -->
+        <script type="text/javascript" src="/static/js/script.js"></script>
+
+    </body>
+
 </html>
+
