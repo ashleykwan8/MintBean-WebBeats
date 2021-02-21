@@ -1,9 +1,9 @@
 // import * as Tone from 'tone'
 
-//create a synth and connect it to the main output (your speakers)
+// create a synth and connect it to the main output (your speakers)
 // const synth = new Tone.Synth().toDestination();
 
-// //play a middle 'C' for the duration of an 8th note
+//play a middle 'C' for the duration of an 8th note
 // synth.triggerAttackRelease("C4", "8n");
 
 
@@ -34,9 +34,17 @@ let Key = document.getElementById("hi")
 // document.getElementById("#hi").addEventListener("click", myFunction);
 
 function myFunction() {
-    Key.addEventListener("click", (evt) => {
+    Key.addEventListener("click", async () => {
         alert("Hello World")
+        const synth = new Tone.MembraneSynth().toMaster();
+      
+        synth.triggerAttackRelease("C2", "8n")
+        
+        // await Tone.start()
+        // console.log('audio is ready')
+        // synth.triggerAttackRelease("C4", "8n");
+
     });
-}
+} 
 
 myFunction() 
