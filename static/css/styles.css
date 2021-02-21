@@ -27,6 +27,7 @@
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 body{
   background-color: antiquewhite;
 }
@@ -52,6 +53,8 @@ body{
 .white:hover{
 filter: brightness(150%);
 =======
+=======
+>>>>>>> main
 .key {
   display: inline-block;
   position: relative;
@@ -68,6 +71,9 @@ filter: brightness(150%);
 }
 .white:hover {
   filter: brightness(150%);
+<<<<<<< HEAD
+>>>>>>> main
+=======
 >>>>>>> main
 }
 .white:active {
@@ -76,6 +82,7 @@ filter: brightness(150%);
 }
 
 .black {
+<<<<<<< HEAD
 <<<<<<< HEAD
   background-color:  rgb(54, 51, 51);
   height:160px;
@@ -135,6 +142,8 @@ filter: brightness(150%);
   box-shadow: 0 0.1rem rgba(255, 255, 255, 0.65);
 }
 =======
+=======
+>>>>>>> main
   background-color: rgb(54, 51, 51);
   height: 160px;
   width: 40px;
@@ -287,4 +296,7 @@ filter: brightness(150%);
 /* .hi {
   margin-top: 500px;
 } */
+<<<<<<< HEAD
+>>>>>>> main
+=======
 >>>>>>> main
