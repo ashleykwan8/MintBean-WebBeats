@@ -36,9 +36,9 @@ let Key = document.getElementById("hi")
 function myFunction() {
     Key.addEventListener("click", async () => {
         alert("Hello World")
-        const synth = new Tone.MembraneSynth().toMaster();
+        const synth = new Tone.MonoSynth().toMaster();
       
-        synth.triggerAttackRelease("C2", "8n")
+        synth.triggerAttackRelease("C1", "8n")
         
         // await Tone.start()
         // console.log('audio is ready')
