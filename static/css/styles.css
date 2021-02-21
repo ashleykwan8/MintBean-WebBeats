@@ -1,17 +1,22 @@
-body {
-  background-color: blueviolet;
+#hi {
+  margin-top: 100px;
+  padding-bottom: 100px;
 }
-ul {
+
+/* body {
+  background-color: blueviolet;
+} */
+/* ul {
   display: inline;
   list-style: none;
   text-align: center;
-}
+} */
 
-li {
+/* li {
   margin: 0;
   padding: 0;
   display: inline;
-}
+} */
 
 .white {
   background-color: rgb(49, 46, 46);
@@ -21,6 +26,7 @@ li {
   background-color: #dfdedf;
 }
 
+<<<<<<< HEAD
 body{
   background-color: antiquewhite;
 }
@@ -45,6 +51,24 @@ body{
 }
 .white:hover{
 filter: brightness(150%);
+=======
+.key {
+  display: inline-block;
+  position: relative;
+  box-shadow: 0 0.3rem rgba(121, 121, 121, 0.65);
+}
+.white {
+  /* position: absolute; */
+  background-color: #fff;
+  height: 220px;
+  width: 80px;
+  z-index: 1;
+  border: 1px solid rgb(49, 46, 46);
+  border-radius: 0px 0px 10px 10px;
+}
+.white:hover {
+  filter: brightness(150%);
+>>>>>>> main
 }
 .white:active {
   transform: translate(0, 0.3rem);
@@ -52,6 +76,7 @@ filter: brightness(150%);
 }
 
 .black {
+<<<<<<< HEAD
   background-color:  rgb(54, 51, 51);
   height:160px;
   width: 40px;
@@ -109,3 +134,157 @@ filter: brightness(150%);
   transform: translate(0, 0.3rem);
   box-shadow: 0 0.1rem rgba(255, 255, 255, 0.65);
 }
+=======
+  background-color: rgb(54, 51, 51);
+  height: 160px;
+  width: 40px;
+  z-index: 2;
+  border-radius: 0px 0px 10px 10px;
+  position: relative;
+}
+.black:hover {
+  filter: brightness(150%);
+}
+.black:active {
+  transform: translate(0, 0.3rem);
+  box-shadow: 0 0.1rem rgba(255, 255, 255, 0.65);
+  margin-left: 200px;
+}
+
+#C {
+  position: absolute;
+  background-color: #fff;
+  height: 220px;
+  width: 80px;
+  max-width: 100%;
+  z-index: 1;
+  border: 1px solid rgb(49, 46, 46);
+  border-radius: 0px 0px 10px 10px;
+}
+
+#D {
+  position: absolute;
+  background-color: #fff;
+  height: 220px;
+  width: 80px;
+  max-width: 100%;
+  z-index: 1;
+  border: 1px solid rgb(49, 46, 46);
+  border-radius: 0px 0px 10px 10px;
+  margin-left: 80px;
+}
+
+#E {
+  position: absolute;
+  background-color: #fff;
+  height: 220px;
+  width: 80px;
+  max-width: 100%;
+  z-index: 1;
+  border: 1px solid rgb(49, 46, 46);
+  border-radius: 0px 0px 10px 10px;
+  margin-left: 160px;
+}
+
+#F {
+  position: absolute;
+  background-color: #fff;
+  height: 220px;
+  width: 80px;
+  max-width: 100%;
+  z-index: 1;
+  border: 1px solid rgb(49, 46, 46);
+  border-radius: 0px 0px 10px 10px;
+  margin-left: 240px;
+}
+
+#G {
+  position: absolute;
+  background-color: #fff;
+  height: 220px;
+  width: 80px;
+  max-width: 100%;
+  z-index: 1;
+  border: 1px solid rgb(49, 46, 46);
+  border-radius: 0px 0px 10px 10px;
+  margin-left: 320px;
+}
+
+#A {
+  position: absolute;
+  background-color: #fff;
+  height: 220px;
+  width: 80px;
+  max-width: 100%;
+  z-index: 1;
+  border: 1px solid rgb(49, 46, 46);
+  border-radius: 0px 0px 10px 10px;
+  margin-left: 400px;
+}
+
+#B {
+  position: absolute;
+  background-color: #fff;
+  height: 220px;
+  width: 80px;
+  max-width: 100%;
+  z-index: 1;
+  border: 1px solid rgb(49, 46, 46);
+  border-radius: 0px 0px 10px 10px;
+  margin-left: 480px;
+}
+
+#C-sharp {
+  position: absolute;
+  display: block;
+  width: 40px;
+  max-width: 100%;
+  /* max-height: 160px; */
+  margin-left: 60px;
+  z-index: 1;
+}
+
+#D-sharp {
+  position: absolute;
+  display: block;
+  width: 40px;
+  max-width: 100%;
+  /* max-height: 160px; */
+  margin-left: 140px;
+  z-index: 1;
+}
+
+#F-sharp {
+  position: absolute;
+  display: block;
+  width: 40px;
+  max-width: 100%;
+  /* max-height: 160px; */
+  margin-left: 300px;
+  z-index: 1;
+}
+
+#G-sharp {
+  position: absolute;
+  display: block;
+  width: 40px;
+  max-width: 100%;
+  /* max-height: 160px; */
+  margin-left: 380px;
+  z-index: 1;
+}
+
+#A-sharp {
+  position: absolute;
+  display: block;
+  width: 40px;
+  max-width: 100%;
+  /* max-height: 160px; */
+  margin-left: 462px;
+  z-index: 1;
+}
+
+/* .hi {
+  margin-top: 500px;
+} */
+>>>>>>> main
