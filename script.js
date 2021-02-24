@@ -1,3 +1,5 @@
+// const { Tone } = require("tone/build/esm/core/Tone")
+
 let record = document.getElementById("record-btn")
 
 let Key = document.getElementById("hi")
@@ -74,9 +76,49 @@ function myRecordings() {
             console.log(dictRecordings[recordName].length)
 
             //Clear the array in javascript
-            keyNotes = []
+            
 
             console.log("THE KEYBOARD", keyNotes)
+            
+            function go() {
+                // Membrane Synth https://tonejs.github.io/docs/r12/MembraneSynth
+                const synth = new Tone.MembraneSynth().toMaster();
+                const notes = keyNotes;
+                console.log("WHAT ARE THE NOTES", notes)
+              
+                const synthPart = new Tone.Sequence(
+                  function(time, note) {
+                    synth.triggerAttackRelease(note, "10hz", time);
+                  },
+                  notes,
+                  "8n"
+                );
+              
+                synthPart.start();
+              
+                /**
+                 * Play Controls
+                 */
+                let playing = false;
+                document.querySelector("body").addEventListener("click", function() {
+                  if (!playing) {
+                    Tone.Transport.start();
+                    playing = true;
+                  } else {
+                    Tone.Transport.stop();
+                  }
+                });
+              }
+              go();
+
+            // let synthPart = new Tone.Sequence(
+            //     function(time, note) {
+            //         synth.triggerAttackRelease(note, "10hz", time);
+            //     }, keyNotes, "4n" );
+
+            // synthPart.start()
+            // Tone.Transport.start()
+            keyNotes = []
             return dictRecordings;
          
 
