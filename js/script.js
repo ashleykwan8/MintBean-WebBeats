@@ -206,7 +206,13 @@ function freePlay() {
    
 }
 
+function changeSound() {
+    const button = document.getElementById("synth")
 
+    if (button === synth) {
+        consol.log("This is Synth!")
+    }
+}
 
 
 
@@ -216,6 +222,8 @@ myRecordings()
 
 //No Recordings being made
 freePlay()
+
+changeSound()
 
 
 console.log(keyNotes)
