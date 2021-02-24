@@ -20,6 +20,7 @@ let now = Tone.now()
 let clicked = false
 let keyNotes = []
 let countRecording = 0
+let dictRecordings = {}
 
 function myRecordings() {
 
@@ -53,15 +54,35 @@ function myRecordings() {
             //Create a dictionary object to hold the recordings to their values -> music notes array
                 // key -> recordingID
                 //value -> array 
-            let dictRecordings = {
-                recordName: keyNotes
+           
+            console.log("THE KEYS TO DICT ARE", keyNotes)
+            console.log(keyNotes.length)
+ 
 
+           //Adding the key value pairs to dictionary
+            dictRecordings[recordName] = []
+
+            //Pushing the keynote values to the value array. Was not working before if the key was assigned to keyNotes. Was returning an empty array
+            for (i = 0; i<keyNotes.length; i++) {
+                console.log(keyNotes[i])
+                dictRecordings[recordName].push(keyNotes[i])
             }
+
+       
 
             console.log(dictRecordings)
-            for (i = 0; i < keyNotes.length; i++ ) {
-                console.log(keyNotes[i])
-            }
+            console.log(dictRecordings[recordName].length)
+
+            //Clear the array in javascript
+            keyNotes = []
+
+            console.log("THE KEYBOARD", keyNotes)
+            return dictRecordings;
+         
+
+            // for (i = 0; i < keyNotes.length; i++ ) {
+            //     console.log(keyNotes[i])
+            // }
 
 
         } 
@@ -70,88 +91,93 @@ function myRecordings() {
             record.innerHTML = "Finish"
             clicked = true
             alert("Recording is starting")
+            // keyNotes = []
+            console.log("THE NEW KEYBOARD IS", keyNotes)
 
             KeyC.addEventListener("mousedown", async () => {
                 synth.triggerAttackRelease("C4")
-                keyNotes.push(synth.triggerAttackRelease("C4"))
+                keyNotes.push("C4")
                 //console.log(keyNotes) 
             });
 
 
             KeyCS.addEventListener("mousedown", async () => {
                 synth.triggerAttackRelease("C#4")
-                keyNotes.push(synth.triggerAttackRelease("C#4"))
+                keyNotes.push("C#4")
                 //console.log(keyNotes)
 
             });
 
             KeyD.addEventListener("mousedown", async () => {
                 synth.triggerAttackRelease("D4", "8n")
-                keyNotes.push(synth.triggerAttackRelease("D4", "8n"))
+                keyNotes.push("D4")
                 //console.log(keyNotes)
             });
 
             KeyDS.addEventListener("mousedown", async () => {
                 synth.triggerAttackRelease("D#4", "8n")
-                keyNotes.push(synth.triggerAttackRelease("D#4", "8n"))
+                keyNotes.push("D#4")
                 //console.log(keyNotes)
                 
             });
 
             KeyE.addEventListener("mousedown", async () => {
                 synth.triggerAttackRelease("E4", "8n")
-                keyNotes.push(synth.triggerAttackRelease("E4", "8n"))
+                keyNotes.push("E4")
                 //console.log(keyNotes)
             });
         
             KeyF.addEventListener("mousedown", async () => {
                 synth.triggerAttackRelease("F4", "8n")
-                keyNotes.push(synth.triggerAttackRelease("F4", "8n"))
+                keyNotes.push("F4")
                 //console.log(keyNotes)
             });
 
             KeyFS.addEventListener("mousedown", async () => {
                 synth.triggerAttackRelease("F#4", "8n")
-                keyNotes.push(synth.triggerAttackRelease("F#4", "8n"))
+                keyNotes.push("F#4")
                 //console.log(keyNotes)
             });
 
             KeyG.addEventListener("mousedown", async () => {
                 synth.triggerAttackRelease("G4", "8n")
-                keyNotes.push(synth.triggerAttackRelease("G4", "8n"))
+                keyNotes.push("G4")
                 //console.log(keyNotes)
             });
 
 
             KeyGS.addEventListener("mousedown", async () => {
                 synth.triggerAttackRelease("G#4", "8n")
-                keyNotes.push(synth.triggerAttackRelease("G#4", "8n"))
+                keyNotes.push("G#4")
                 //console.log(keyNotes)
             });
 
 
             KeyA.addEventListener("mousedown", async () => {
                 synth.triggerAttackRelease("A4", "8n")
-                keyNotes.push(synth.triggerAttackRelease("A4", "8n"))
+                keyNotes.push("A4")
                 //console.log(keyNotes)
             });
 
 
             KeyAS.addEventListener("mousedown", async () => {
                 synth.triggerAttackRelease("A#4", "8n")
-                keyNotes.push(synth.triggerAttackRelease("A#4", "8n"))
+                keyNotes.push("A#4")
                 //console.log(keyNotes)
             });
 
             KeyB.addEventListener("mousedown", async () => {
                 synth.triggerAttackRelease("B4", "8n")
-                keyNotes.push(synth.triggerAttackRelease("B4", "8n"))
+                keyNotes.push("B4")
                 //console.log(keyNotes)
             });
-            console.log(keyNotes) 
+
+            // console.log(keyNotes) 
         }
 
     }); }
+
+
 
 function freePlay() {
     KeyC.addEventListener("mousedown", async () => {
@@ -226,6 +252,13 @@ function freePlay() {
 
 
 
+//Create a function to play back the music when user clicks on their Recordings
+// function playBackMusic() {
+
+//     document.querySelector
+
+// }
+
 
 
 //Start recordings
@@ -235,5 +268,13 @@ myRecordings()
 freePlay()
 
 
-console.log(keyNotes)
+
+// for (let key in dictRecordings) {
+//     console.log("HELLO")
+//     console.log(key, dictRecordings[key])
+// }
+
+// let arrayN = [1,2,3]
+// console.log(arrayN)
+// console.log(keyNotes)
 
