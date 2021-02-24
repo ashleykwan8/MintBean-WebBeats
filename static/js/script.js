@@ -34,12 +34,17 @@ function myRecordings() {
             alert("Stop Recording")
             console.log(keyNotes) // Return the recorded keynotes
 
+            //Creating a new button inside a div for each recording
             //TODO: Finish setting up recording to DOM
-            
+            let newDivRecording = document.createElement("div")
             let newRecording = document.createElement("BUTTON")
+
+            newDivRecording.classList.add("my-recordings")
+            newRecording.id = ("recording" + countRecording)  //NOTE: Decided  to include a class or id for now in case we wanted to customize each button uniquely per different instrument recorded or used?
             countRecording = countRecording + 1
             newRecording.innerHTML = "RECORDING" + (countRecording)
-            document.body.appendChild(newRecording)
+            document.body.appendChild(newDivRecording)
+            newDivRecording.appendChild(newRecording)
 
 
         } 
