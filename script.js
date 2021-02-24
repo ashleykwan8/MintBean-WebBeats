@@ -223,13 +223,12 @@ function freePlay() {
    
 }
 
-function changeSound() {
-    const button = document.getElementById("synth")
+// sample code for changing the tones
+// keyboard.addEventListener("change", (event) => {
+//     currentInstrument = event.target.value;
 
-    if (button === synth) {
-        consol.log("This is Synth!")
-    }
-}
+//     synth = changeInstrument(currentInstrument);
+// });
 
 
 
