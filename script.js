@@ -249,7 +249,12 @@ function freePlay() {
    
 }
 
+// sample code for changing the tones
+// keyboard.addEventListener("change", (event) => {
+//     currentInstrument = event.target.value;
 
+//     synth = changeInstrument(currentInstrument);
+// });
 
 
 //Create a function to play back the music when user clicks on their Recordings
@@ -266,6 +271,8 @@ myRecordings()
 
 //No Recordings being made
 freePlay()
+
+changeSound()
 
 
 
