@@ -1,11 +1,11 @@
-#hi {
+/* #hi {
   margin-top: 100px;
   padding-bottom: 100px;
-}
-
-/* body {
-  background-color: blueviolet;
 } */
+
+body {
+  background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(0, 89, 255));
+}
 /* ul {
   display: inline;
   list-style: none;
@@ -16,6 +16,11 @@
   margin: 0;
   padding: 0;
   display: inline;
+} */
+
+/* .keyboard-container {
+  margin-left: 400px;
+  margin-top: 150px;
 } */
 
 .white {
