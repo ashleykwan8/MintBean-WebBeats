@@ -7,7 +7,7 @@
 // synth.triggerAttackRelease("C4", "8n");
 
 
-// document.querySelector(".key-white").addEventListener("click", async () => {
+// document.querySelector(".key-white").addEventListener("mousedown", async () => {
 //     const synth = new Tone.Synth().toDestination();
 //     await Tone.start();
 //     synth.triggerAttackRelease("C4", "8n");
@@ -23,7 +23,7 @@
 // console.log(Key);
 
 // function callMe(evt) {
-//     Key.addEventListener("click", (evt) => {
+//     Key.addEventListener("mousedown", (evt) => {
 
 //     alert("You cliecked me");
 //     console.log("works?");
@@ -43,95 +43,86 @@ let KeyGS = document.getElementById("G-sharp")
 let KeyA = document.getElementById("A")
 let KeyAS = document.getElementById("A-sharp")
 let KeyB = document.getElementById("B")
+const synth = new Tone.MembraneSynth().toMaster();
+let now = Tone.now()
 
 
 function myFunction() {
-    Key.addEventListener("click", async () => {
-        alert("Hello World")
-        const synth = new Tone.MonoSynth().toMaster();
-      
-        synth.triggerAttackRelease("C1", "8n")
+    // keys playing
+    
+    KeyC.addEventListener("mousedown", async () => {
         
-        // await Tone.start()
-        // console.log('audio is ready')
-        // synth.triggerAttackRelease("C4", "8n");
-
-    });
-    KeyC.addEventListener("click", async () => {
         
-        const synth = new Tone.MembraneSynth().toMaster();
-      
-        synth.triggerAttackRelease("C2", "8n")
+        synth.triggerAttackRelease("C4")
 });
-    KeyCS.addEventListener("click", async () => {
+    KeyCS.addEventListener("mousedown", async () => {
         
-    const synth = new Tone.MembraneSynth().toMaster();
+    
   
-    synth.triggerAttackRelease("C5", "8n")
+    synth.triggerAttackRelease("C#4")
 });
-    KeyD.addEventListener("click", async () => {
+    KeyD.addEventListener("mousedown", async () => {
         
-    const synth = new Tone.MembraneSynth().toMaster();
+    
   
-    synth.triggerAttackRelease("D2", "8n")
+    synth.triggerAttackRelease("D4", "8n")
 });
-    KeyDS.addEventListener("click", async () => {
+    KeyDS.addEventListener("mousedown", async () => {
         
-    const synth = new Tone.MembraneSynth().toMaster();
+    
   
-    synth.triggerAttackRelease("D5", "8n")
+    synth.triggerAttackRelease("D#4", "8n")
 });
-    KeyE.addEventListener("click", async () => {
+    KeyE.addEventListener("mousedown", async () => {
         
-    const synth = new Tone.MembraneSynth().toMaster();
+    
   
-    synth.triggerAttackRelease("E5", "8n")
+    synth.triggerAttackRelease("E4", "8n")
 });
-    KeyF.addEventListener("click", async () => {
+    KeyF.addEventListener("mousedown", async () => {
         
-    const synth = new Tone.MembraneSynth().toMaster();
+    
   
-    synth.triggerAttackRelease("f2", "8n")
+    synth.triggerAttackRelease("F4", "8n")
 });
-    KeyFS.addEventListener("click", async () => {
+    KeyFS.addEventListener("mousedown", async () => {
         
-    const synth = new Tone.MembraneSynth().toMaster();
+    
   
-    synth.triggerAttackRelease("D5", "8n")
+    synth.triggerAttackRelease("F#4", "8n")
 });
-    KeyG.addEventListener("click", async () => {
+    KeyG.addEventListener("mousedown", async () => {
         
-    const synth = new Tone.MembraneSynth().toMaster();
-  
-    synth.triggerAttackRelease("G2", "8n")
-});
-    KeyGS.addEventListener("click", async () => {
-        
-    const synth = new Tone.MembraneSynth().toMaster();
+    
   
     synth.triggerAttackRelease("G4", "8n")
 });
-    KeyA.addEventListener("click", async () => {
+    KeyGS.addEventListener("mousedown", async () => {
         
-    const synth = new Tone.MembraneSynth().toMaster();
+    
   
-    synth.triggerAttackRelease("A2", "8n")
+    synth.triggerAttackRelease("G#4", "8n")
 });
-    KeyAS.addEventListener("click", async () => {
+    KeyA.addEventListener("mousedown", async () => {
         
-    const synth = new Tone.MembraneSynth().toMaster();
+    
   
-    synth.triggerAttackRelease("D5", "8n")
+    synth.triggerAttackRelease("A4", "8n")
 });
-    KeyB.addEventListener("click", async () => {
+    KeyAS.addEventListener("mousedown", async () => {
         
-    const synth = new Tone.MembraneSynth().toMaster();
+   
   
-    synth.triggerAttackRelease("B2", "8n")
+    synth.triggerAttackRelease("A#4", "8n")
+});
+    KeyB.addEventListener("mousedown", async () => {
+        
+    
+  
+    synth.triggerAttackRelease("B4", "8n")
 });
 
 }
 
 
 myFunction() 
-
