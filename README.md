@@ -20,19 +20,19 @@ Are you ready to make some noise?
 
 ## <a name="features"></a>Features
 
-# Choose from a variety of toppings
+# Choose 
 
 <br><br>
 
-# Add, Edit, and Delete toppings
+# Add
 
 <br><br>
 
-# Pay and add a tip
+# Pay
 
 <br><br>
 
-# Create unique pizzas
+# Create 
 
 <br><br>
 
