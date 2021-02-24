@@ -1,35 +1,5 @@
-// import * as Tone from 'tone'
+let record = document.getElementById("record-btn")
 
-// create a synth and connect it to the main output (your speakers)
-// const synth = new Tone.Synth().toDestination();
-
-//play a middle 'C' for the duration of an 8th note
-// synth.triggerAttackRelease("C4", "8n");
-
-
-// document.querySelector(".key-white").addEventListener("mousedown", async () => {
-//     const synth = new Tone.Synth().toDestination();
-//     await Tone.start();
-//     synth.triggerAttackRelease("C4", "8n");
-//     alert("You cliecked me");
-//     console.log("works?");
-// })
-
-// let elementKey = document.getElementById("C-sharp");
-// console.log("HI")
-// console.log(elementKey)
-
-// let Key = document.querySelectorAll("#C-sharp")
-// console.log(Key);
-
-// function callMe(evt) {
-//     Key.addEventListener("mousedown", (evt) => {
-
-//     alert("You cliecked me");
-//     console.log("works?");
-// });
-
-// callMe();
 let Key = document.getElementById("hi")
 let KeyC = document.getElementById("C")
 let KeyCS = document.getElementById("C-sharp")
@@ -47,89 +17,206 @@ const synth = new Tone.MembraneSynth().toMaster();
 let now = Tone.now()
 
 
-function myFunction() {
+let clicked = false
+let keyNotes = []
+let countRecording = 0
 
-    // Key.addEventListener("click", async () => {
-    //     alert("Hello World")
-    //     const synth = new Tone.MonoSynth().toMaster();
-      
-    //     synth.triggerAttackRelease("C1", "8n")
+function myRecordings() {
 
-    // keys playing
-    
+  
+    record.addEventListener("click", (e) => {
+        alert("YOU")
+        
+
+        if (record.innerHTML == "Finish") {
+            record.innerHTML = "Record";
+            clicked = false
+            alert("Stop Recording")
+            console.log(keyNotes) // Return the recorded keynotes
+
+            //Creating a new button inside a div for each recording
+            //TODO: Finish setting up recording to DOM
+            let newDivRecording = document.createElement("div")
+            let newRecording = document.createElement("BUTTON")
+
+            newDivRecording.classList.add("my-recordings")
+            newRecording.id = ("recording" + countRecording)  //NOTE: Decided  to include a class or id for now in case we wanted to customize each button uniquely per different instrument recorded or used?
+            countRecording = countRecording + 1
+            newRecording.innerHTML = "RECORDING" + (countRecording)
+            document.body.appendChild(newDivRecording)
+            newDivRecording.appendChild(newRecording)
+
+
+        } 
+        
+        else {
+            record.innerHTML = "Finish"
+            clicked = true
+            alert("Recording is starting")
+
+            KeyC.addEventListener("mousedown", async () => {
+                synth.triggerAttackRelease("C4")
+                keyNotes.push(synth.triggerAttackRelease("C4"))
+                //console.log(keyNotes) 
+            });
+
+
+            KeyCS.addEventListener("mousedown", async () => {
+                synth.triggerAttackRelease("C#4")
+                keyNotes.push(synth.triggerAttackRelease("C#4"))
+                //console.log(keyNotes)
+
+            });
+
+            KeyD.addEventListener("mousedown", async () => {
+                synth.triggerAttackRelease("D4", "8n")
+                keyNotes.push(synth.triggerAttackRelease("D4", "8n"))
+                //console.log(keyNotes)
+            });
+
+            KeyDS.addEventListener("mousedown", async () => {
+                synth.triggerAttackRelease("D#4", "8n")
+                keyNotes.push(synth.triggerAttackRelease("D#4", "8n"))
+                //console.log(keyNotes)
+                
+            });
+
+            KeyE.addEventListener("mousedown", async () => {
+                synth.triggerAttackRelease("E4", "8n")
+                keyNotes.push(synth.triggerAttackRelease("E4", "8n"))
+                //console.log(keyNotes)
+            });
+        
+            KeyF.addEventListener("mousedown", async () => {
+                synth.triggerAttackRelease("F4", "8n")
+                keyNotes.push(synth.triggerAttackRelease("F4", "8n"))
+                //console.log(keyNotes)
+            });
+
+            KeyFS.addEventListener("mousedown", async () => {
+                synth.triggerAttackRelease("F#4", "8n")
+                keyNotes.push(synth.triggerAttackRelease("F#4", "8n"))
+                //console.log(keyNotes)
+            });
+
+            KeyG.addEventListener("mousedown", async () => {
+                synth.triggerAttackRelease("G4", "8n")
+                keyNotes.push(synth.triggerAttackRelease("G4", "8n"))
+                //console.log(keyNotes)
+            });
+
+
+            KeyGS.addEventListener("mousedown", async () => {
+                synth.triggerAttackRelease("G#4", "8n")
+                keyNotes.push(synth.triggerAttackRelease("G#4", "8n"))
+                //console.log(keyNotes)
+            });
+
+
+            KeyA.addEventListener("mousedown", async () => {
+                synth.triggerAttackRelease("A4", "8n")
+                keyNotes.push(synth.triggerAttackRelease("A4", "8n"))
+                //console.log(keyNotes)
+            });
+
+
+            KeyAS.addEventListener("mousedown", async () => {
+                synth.triggerAttackRelease("A#4", "8n")
+                keyNotes.push(synth.triggerAttackRelease("A#4", "8n"))
+                //console.log(keyNotes)
+            });
+
+            KeyB.addEventListener("mousedown", async () => {
+                synth.triggerAttackRelease("B4", "8n")
+                keyNotes.push(synth.triggerAttackRelease("B4", "8n"))
+                //console.log(keyNotes)
+            });
+            console.log(keyNotes) 
+        }
+
+    }); }
+
+function freePlay() {
     KeyC.addEventListener("mousedown", async () => {
-        
-        
         synth.triggerAttackRelease("C4")
-});
-    KeyCS.addEventListener("mousedown", async () => {
         
-    
-  
-    synth.triggerAttackRelease("C#4")
-});
-    KeyD.addEventListener("mousedown", async () => {
-        
-    
-  
-    synth.triggerAttackRelease("D4", "8n")
-});
-    KeyDS.addEventListener("mousedown", async () => {
-        
-    
-  
-    synth.triggerAttackRelease("D#4", "8n")
-});
-    KeyE.addEventListener("mousedown", async () => {
-        
-    
-  
-    synth.triggerAttackRelease("E4", "8n")
-});
-    KeyF.addEventListener("mousedown", async () => {
-        
-    
-  
-    synth.triggerAttackRelease("F4", "8n")
-});
-    KeyFS.addEventListener("mousedown", async () => {
-        
-    
-  
-    synth.triggerAttackRelease("F#4", "8n")
-});
-    KeyG.addEventListener("mousedown", async () => {
-        
-    
-  
-    synth.triggerAttackRelease("G4", "8n")
-});
-    KeyGS.addEventListener("mousedown", async () => {
-        
-    
-  
-    synth.triggerAttackRelease("G#4", "8n")
-});
-    KeyA.addEventListener("mousedown", async () => {
-        
-    
-  
-    synth.triggerAttackRelease("A4", "8n")
-});
-    KeyAS.addEventListener("mousedown", async () => {
-        
-   
-  
-    synth.triggerAttackRelease("A#4", "8n")
-});
-    KeyB.addEventListener("mousedown", async () => {
-        
-    
-  
-    synth.triggerAttackRelease("B4", "8n")
-});
+        //console.log(keyNotes) 
+    });
 
+
+    KeyCS.addEventListener("mousedown", async () => {
+        synth.triggerAttackRelease("C#4")
+        //console.log(keyNotes)
+
+    });
+
+    KeyD.addEventListener("mousedown", async () => {
+        synth.triggerAttackRelease("D4", "8n")
+        //console.log(keyNotes)
+    });
+
+    KeyDS.addEventListener("mousedown", async () => {
+        synth.triggerAttackRelease("D#4", "8n")
+        //console.log(keyNotes)
+        
+    });
+
+    KeyE.addEventListener("mousedown", async () => {
+        synth.triggerAttackRelease("E4", "8n")
+        //console.log(keyNotes)
+    });
+
+    KeyF.addEventListener("mousedown", async () => {
+        synth.triggerAttackRelease("F4", "8n")
+        //console.log(keyNotes)
+    });
+
+    KeyFS.addEventListener("mousedown", async () => {
+        synth.triggerAttackRelease("F#4", "8n")
+        //console.log(keyNotes)
+    });
+
+    KeyG.addEventListener("mousedown", async () => {
+        synth.triggerAttackRelease("G4", "8n")
+        //console.log(keyNotes)
+    });
+
+
+    KeyGS.addEventListener("mousedown", async () => {
+        synth.triggerAttackRelease("G#4", "8n")
+        //console.log(keyNotes)
+    });
+
+
+    KeyA.addEventListener("mousedown", async () => {
+        synth.triggerAttackRelease("A4", "8n")
+        //console.log(keyNotes)
+    });
+
+
+    KeyAS.addEventListener("mousedown", async () => {
+        synth.triggerAttackRelease("A#4", "8n")
+        //console.log(keyNotes)
+    });
+
+    KeyB.addEventListener("mousedown", async () => {
+        synth.triggerAttackRelease("B4", "8n")
+        //console.log(keyNotes)
+    });
+   
 }
 
 
-myFunction() 
+
+
+
+
+//Start recordings
+myRecordings() 
+
+//No Recordings being made
+freePlay()
+
+
+console.log(keyNotes)
+
