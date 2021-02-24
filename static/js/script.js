@@ -19,6 +19,7 @@ let now = Tone.now()
 
 let clicked = false
 let keyNotes = []
+let countRecording = 0
 
 function myRecordings() {
 
@@ -34,10 +35,12 @@ function myRecordings() {
             console.log(keyNotes) // Return the recorded keynotes
 
             //TODO: Finish setting up recording to DOM
-            let countRecording = 0
+            
             let newRecording = document.createElement("BUTTON")
-            newRecording.innerHTML = "PLAYER"
+            countRecording = countRecording + 1
+            newRecording.innerHTML = "RECORDING" + (countRecording)
             document.body.appendChild(newRecording)
+
 
         } 
         
