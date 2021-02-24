@@ -48,6 +48,13 @@ let now = Tone.now()
 
 
 function myFunction() {
+
+    // Key.addEventListener("click", async () => {
+    //     alert("Hello World")
+    //     const synth = new Tone.MonoSynth().toMaster();
+      
+    //     synth.triggerAttackRelease("C1", "8n")
+
     // keys playing
     
     KeyC.addEventListener("mousedown", async () => {
