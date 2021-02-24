@@ -45,8 +45,9 @@ function myRecordings() {
             let newRecording = document.createElement("BUTTON")
 
             newDivRecording.classList.add("my-recordings")
-            newRecording.id = ("recording" + countRecording)  //NOTE: Decided  to include a class or id for now in case we wanted to customize each button uniquely per different instrument recorded or used?
             countRecording = countRecording + 1
+            newRecording.id = ("RECORDING" + countRecording)  //NOTE: Decided  to include a class or id for now in case we wanted to customize each button uniquely per different instrument recorded or used?
+            
 
             let recordName = "RECORDING" + (countRecording)
             newRecording.innerHTML = recordName
