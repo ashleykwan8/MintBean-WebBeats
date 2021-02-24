@@ -36,15 +36,32 @@ function myRecordings() {
 
             //Creating a new button inside a div for each recording
             //TODO: Finish setting up recording to DOM
+            
+
             let newDivRecording = document.createElement("div")
             let newRecording = document.createElement("BUTTON")
 
             newDivRecording.classList.add("my-recordings")
             newRecording.id = ("recording" + countRecording)  //NOTE: Decided  to include a class or id for now in case we wanted to customize each button uniquely per different instrument recorded or used?
             countRecording = countRecording + 1
-            newRecording.innerHTML = "RECORDING" + (countRecording)
+
+            let recordName = "RECORDING" + (countRecording)
+            newRecording.innerHTML = recordName
             document.body.appendChild(newDivRecording)
             newDivRecording.appendChild(newRecording)
+
+            //Create a dictionary object to hold the recordings to their values -> music notes array
+                // key -> recordingID
+                //value -> array 
+            let dictRecordings = {
+                recordName: keyNotes
+
+            }
+
+            console.log(dictRecordings)
+            for (i = 0; i < keyNotes.length; i++ ) {
+                console.log(keyNotes[i])
+            }
 
 
         } 
