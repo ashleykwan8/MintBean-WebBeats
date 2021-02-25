@@ -14,25 +14,19 @@ Are you ready to make some noise?
 
 ## <a name="tech-stack"></a>Tech Stack
 
-**Front End:** Javascript<br>
-**Frameworks/Libraries:** Tone.js<br>
+**Front End:** Javascript, HTML, CSS<br>
+**Frameworks/Libraries:** Tone.js, Bootstrap4<br>
 <br/>
 
 ## <a name="features"></a>Features
 
-# Choose 
+# Choose different instruments
 
 <br><br>
 
-# Add
+# Create and play back recordings
 
 <br><br>
-
-# Pay
-
-<br><br>
-
-# Create 
 
 <br><br>
 
