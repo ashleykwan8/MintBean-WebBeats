@@ -14,9 +14,33 @@
         .kitty {
             height: 100px;
             width: 100px;
+            margin-bottom: 10px
         }
         footer {
             text-align: center;
+        }
+        h1 {
+            background-color: #94ebcd;
+            border-radius: 25px;
+            margin-top: 80px;
+            margin-right: 125px;
+            text-align: center;
+        }
+        body {
+            background-color: #6ddccf;
+        }
+        .team  {
+            text-align: center;
+            background-color: #94ebcd;
+            margin-right: 125px;
+            border-radius: 25px;
+        }
+        #info {
+            background-color: #f8f1f1;
+            border-radius: 25px;
+            margin-top: 80px;
+            margin-bottom: 16px;
+
         }
     </style>
     <body>
@@ -26,19 +50,23 @@
                 <h1>
                     Title of Project
                 </h1>
-                <img class="keyboard" src="images/keyboard1.png" alt="keyboard-img">
-                <h2>
-                    By Team Name
-                </h2>
-                <img class="kitty" src="images/kitty1.png" alt="avatar1-img">
-                <img class="kitty" src="images/kitty3.png" alt="avatar2-img">
-                <img class="kitty" src="images/kitty4.png" alt="avatar3-img">
-
+                <img class="keyboard" style="text-align: center" src="images/keyboard1.png" alt="keyboard-img">
+                <div class="team">
+                    <h2 style="margin-bottom: 20px;">
+                        By Team Hackbrighters
+                    </h2>
+                    <img class="kitty" src="images/kitty1.png" style="margin-right:40px" alt="avatar1-img">
+                    <img class="kitty" src="images/kitty3.png" style="margin-right:40px" alt="avatar2-img">
+                    <img class="kitty" src="images/kitty4.png" alt="avatar3-img">
+                    <pre>Hannah            Sarah            Ashley</pre>
                 </div>
-                <div class="col-6">
+                </div>
+                <div class="col-6" id="info">
                     <h2>What Does This App Do?</h2>
                     <ul>
                         <li>An interactive keyboard synthesizer that let's your creativity come to life!</li>
+                        <li>Live recording feature</li>
+                        <li>Choose between two different sounds: MonoSynth and Synth</li>
 
                     </ul>
                 Check Out Our Cool Beats!
