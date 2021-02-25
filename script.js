@@ -1,5 +1,7 @@
 // const { Tone } = require("tone/build/esm/core/Tone")
 
+// const { Tone } = require("tone/build/esm/core/Tone")
+
 let record = document.getElementById("record-btn")
 
 let Key = document.getElementById("hi")
@@ -82,11 +84,21 @@ function myRecordings() {
             
 
             console.log("THE KEYBOARD", keyNotes)
+
+            // for (let key in dictRecordings) {
+            //     console.log(key)
+            //     console.log(dictRecordings[key])
+            //     document.querySelector("#" + key).addEventListener("click", () => {
+            //         const synth = new Tone.MembraneSynth().toMaster();
+            //         const notes = dictRecordings[key];
+            //         console.log("DID WE MAKE IT HERE", notes, key)
+            //     } )
+            // }
             
-            function go() {
+            function go(noteArr, keyKey) {
                 // Membrane Synth https://tonejs.github.io/docs/r12/MembraneSynth
                 const synth = new Tone.MembraneSynth().toMaster();
-                const notes = keyNotes;
+                const notes = noteArr;
                 console.log("WHAT ARE THE NOTES", notes)
               
                 const synthPart = new Tone.Sequence(
@@ -102,8 +114,10 @@ function myRecordings() {
                 /**
                  * Play Controls
                  */
+                
+
                 let playing = false;
-                document.querySelector("#RECORDING1").addEventListener("click", function() {
+                document.querySelector("#" + keyKey).addEventListener("click", function() {
                   if (!playing) {
                     Tone.Transport.start();
                     playing = true;
@@ -112,7 +126,14 @@ function myRecordings() {
                   }
                 });
               }
-              go();
+            //   go();
+
+              for (let key in dictRecordings) {
+                console.log(key)
+                console.log(dictRecordings[key])
+                document.querySelector("#" + key).addEventListener("click", go(dictRecordings[key], key))
+            }
+
 
             // let synthPart = new Tone.Sequence(
             //     function(time, note) {
