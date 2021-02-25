@@ -2,7 +2,7 @@
 
 // const { Tone } = require("tone/build/esm/core/Tone")
 
-let record = document.getElementById("record-btn")
+let record = document.querySelector("#record-btn")
 
 let Key = document.getElementById("hi")
 let KeyC = document.getElementById("C")
@@ -32,7 +32,7 @@ function myRecordings() {
 
   
     record.addEventListener("click", (e) => {
-        alert("YOU")
+        // alert("YOU")
         
 
         if (record.innerHTML == "Finish") {
@@ -127,10 +127,12 @@ function myRecordings() {
             //     });
             //   }
             //   go();
-
+            //TODO: Instead of looping, use a dictionary to query in using .get()
               for (let key in dictRecordings) {
                 console.log(key)
                 console.log(dictRecordings[key])
+
+                //TODO: Check this line....possibly looping error causing repeats 
                 document.querySelector("#" + key).onclick = function() {
                 const synth = new Tone.MembraneSynth().toMaster();
                 const notes = dictRecordings[key];
@@ -142,8 +144,9 @@ function myRecordings() {
                   },
                   notes,
                   "8n"
+                  
                 );
-              
+
                 synthPart.start();
               
                 /**
@@ -178,8 +181,8 @@ function myRecordings() {
 
             // synthPart.start()
             // Tone.Transport.start()
-            keyNotes = []
-            return dictRecordings;
+            // keyNotes = []
+            // return dictRecordings;
          
 
             // for (i = 0; i < keyNotes.length; i++ ) {
@@ -193,7 +196,7 @@ function myRecordings() {
             record.innerHTML = "Finish"
             clicked = true
             alert("Recording is starting")
-            // keyNotes = []
+            keyNotes = []
             console.log("THE NEW KEYBOARD IS", keyNotes)
 
             KeyC.addEventListener("mousedown", async () => {
@@ -213,7 +216,7 @@ function myRecordings() {
             KeyD.addEventListener("mousedown", async () => {
                 synth.triggerAttackRelease("D4", "8n")
                 keyNotes.push("D4")
-                //console.log(keyNotes)
+                console.log("FOR D KEYS", keyNotes)
             });
 
             KeyDS.addEventListener("mousedown", async () => {
