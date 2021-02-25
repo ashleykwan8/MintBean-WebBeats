@@ -103,7 +103,7 @@ function myRecordings() {
                  * Play Controls
                  */
                 let playing = false;
-                document.querySelector("body").addEventListener("click", function() {
+                document.querySelector("#RECORDING1").addEventListener("click", function() {
                   if (!playing) {
                     Tone.Transport.start();
                     playing = true;
@@ -414,10 +414,10 @@ synthButton.addEventListener("click", () => {
 myRecordings() 
 
 //No Recordings being made
-// freePlay()
+freePlay()
 
 // changeSound()
-// synthPlay()
+synthPlay()
 
 
 // for (let key in dictRecordings) {
