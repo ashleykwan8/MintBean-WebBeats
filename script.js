@@ -95,10 +95,45 @@ function myRecordings() {
             //     } )
             // }
             
-            function go(noteArr, keyKey) {
-                // Membrane Synth https://tonejs.github.io/docs/r12/MembraneSynth
+            // function go(noteArr, keyKey) {
+            //     // Membrane Synth https://tonejs.github.io/docs/r12/MembraneSynth
+            //     const synth = new Tone.MembraneSynth().toMaster();
+            //     const notes = noteArr;
+            //     console.log("WHAT ARE THE NOTES", notes)
+              
+            //     const synthPart = new Tone.Sequence(
+            //       function(time, note) {
+            //         synth.triggerAttackRelease(note, "10hz", time);
+            //       },
+            //       notes,
+            //       "8n"
+            //     );
+              
+            //     synthPart.start();
+              
+            //     /**
+            //      * Play Controls
+            //      */
+                
+
+            //     let playing = false;
+            //     document.querySelector("#" + keyKey).addEventListener("click", function() {
+            //       if (!playing) {
+            //         Tone.Transport.start();
+            //         playing = true;
+            //       } else {
+            //         Tone.Transport.stop();
+            //       }
+            //     });
+            //   }
+            //   go();
+
+              for (let key in dictRecordings) {
+                console.log(key)
+                console.log(dictRecordings[key])
+                document.querySelector("#" + key).onclick = function() {
                 const synth = new Tone.MembraneSynth().toMaster();
-                const notes = noteArr;
+                const notes = dictRecordings[key];
                 console.log("WHAT ARE THE NOTES", notes)
               
                 const synthPart = new Tone.Sequence(
@@ -114,24 +149,25 @@ function myRecordings() {
                 /**
                  * Play Controls
                  */
-                
-
                 let playing = false;
-                document.querySelector("#" + keyKey).addEventListener("click", function() {
-                  if (!playing) {
-                    Tone.Transport.start();
-                    playing = true;
-                  } else {
-                    Tone.Transport.stop();
-                  }
-                });
-              }
-            //   go();
-
-              for (let key in dictRecordings) {
-                console.log(key)
-                console.log(dictRecordings[key])
-                document.querySelector("#" + key).addEventListener("click", go(dictRecordings[key], key))
+                document.querySelector("#" + key).onclick = function() {
+                    if (!playing) {
+                        Tone.Transport.start();
+                        playing = true;
+                      } else {
+                        Tone.Transport.stop();
+                      }
+                }
+                // let playing = false;
+                // if (!playing) {
+                //     Tone.Transport.start();
+                //     playing = true;
+                //   } else {
+                //     Tone.Transport.stop();
+                //   }
+                }
+       
+           
             }
 
 
