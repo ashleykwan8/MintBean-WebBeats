@@ -1,78 +1,85 @@
 <!DOCTYPE html>
     <html lang="en">
     <head>
-        
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>MintBean Hackathon</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <link rel="stylesheet" href="styles.css">
-
-    
+        <link rel="icon" href="favicon.ico">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+        <!-- Get Google Fonts links -->
         
     </head>
+    <style>
+        .kitty {
+            height: 100px;
+            width: 100px;
+            margin-bottom: 10px
+        }
+        footer {
+            text-align: center;
+        }
+        h1 {
+            background-color: #94ebcd;
+            border-radius: 25px;
+            margin-top: 80px;
+            margin-right: 125px;
+            text-align: center;
+        }
+        body {
+            background-color: #6ddccf;
+        }
+        .team  {
+            text-align: center;
+            background-color: #94ebcd;
+            margin-right: 125px;
+            border-radius: 25px;
+        }
+        #info {
+            background-color: #f8f1f1;
+            border-radius: 25px;
+            margin-top: 80px;
+            margin-bottom: 16px;
+
+        }
+    </style>
     <body>
-        <!-- <p id= "hi"> HI</p> -->
-        <!-- <div class="dropdown">
-            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Dropdown button
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" id="synth" href="#">Synth</a>
-              <a class="dropdown-item" href="#">Another action</a>
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                <h1>
+                    Title
+                </h1>
+                <img class="keyboard" style="text-align: center" src="images/keyboard1.png" alt="keyboard-img">
+                <div class="team">
+                    <h2 style="margin-bottom: 20px;">
+                        By Team Hackbrighters
+                    </h2>
+                    <img class="kitty" src="images/kitty1.png" style="margin-right:40px" alt="avatar1-img">
+                    <img class="kitty" src="images/kitty3.png" style="margin-right:40px" alt="avatar2-img">
+                    <img class="kitty" src="images/kitty4.png" alt="avatar3-img">
+                    <pre>Hannah            Sarah            Ashley</pre>
+                </div>
+                </div>
+                <div class="col-6" id="info">
+                    <h2 style="text-align: center; margin-top: 25px;">What Does This App Do?</h2>
+                    <ul>
+                        <li>An interactive keyboard synthesizer that let's your creativity come to life!</li>
+                        <li>Live recording feature</li>
+                        <li>Playback of recordings</li>
+                        <li>Choose between two different sounds: MonoSynth and Synth</li>
+                    </ul>
+                    <img class="keyboard" style="margin-left: 65px;" src="images/keyboard1.png" alt="keyboard-img">
+
+                    <h3 style="text-align: center;">
+                        <a href="keyboard.html">Check Out Our Cool Beats!</a>
+                    </h3>
+                </div>
             </div>
-        </div> -->
-        <!-- <button type="button" class="btn btn-info" id="monosynth">MonoSynth</button>
-        <button type="button" class="btn btn-info" id="synth">Synth</button> -->
-
-        <div id="keyboard-container" style="margin-left: 430px;margin-top: 150px;">
-    
-            <div class= "key white" id="C"></div>
-            <div class= "key white" id="D"></div>
-            <div class= "key white" id="E"></div>
-            <div class= "key white" id="F"></div>
-            <div class= "key white" id="G"></div>
-            <div class= "key white" id="A"></div>
-            <div class= "key white" id="B"></div>
-
-
-            <div class= "key black" id="C-sharp"></div>
-            <div class= "key black" id="D-sharp"></div>
-            <div class= "key black" id="F-sharp"></div>
-            <div class= "key black" id="G-sharp"></div>
-            <div class= "key black" id="A-sharp"></div>
-
-
-           
-        </div>
-        <a href="landing.html"><button>Home</button></a>
-
-        <div class="record">
-
-            <button id="record-btn">Record</button>
-
-        </div>
-        
-        <div class="sounds">
-            <!-- <select id="instrument-select">
-                <option value="membrsynth">MembraneSynth</option>
-                <option value="synth">Synth</option>
-              </select> -->
-            <button type="button" class="btn btn-info" id="membrsynth">MonoSynth</button>
-            <button type="button" class="btn btn-info" id="synth">Synth</button>
-        </div>
-
-
-        <!-- CDN for Tone.js -->
-        <script src="https://unpkg.com/tone@13.8.25/build/Tone.js"></script>
-        <!-- Javascript link -->
-
-        <script type="text/javascript" src="script.js"></script>
-        <!-- Bootstrap4 JQuery scripts for Dropdown menu -->
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+          </div>
+          <footer>
+            <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+          </footer>
 
     </body>
 
