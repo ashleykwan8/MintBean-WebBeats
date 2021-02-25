@@ -364,12 +364,38 @@ function synthPlay() {
 }
 
 // buttons for changing the sounds
-const monoSynthButton = document.getElementById("monosynth");
-monoSynthButton.addEventListener("click", freePlay);
+// const instrumentOptions = document.querySelector("#instrument-select")
+
+// const currentSound = "membrsynth"
+// const changeSound = (currentSound) => {
+//     switch (currentSound) {
+//         case "membrsynth":
+//             return new Tone.MembraneSynth().toMaster();
+//         case "synth":
+//             return new Tone.Synth().toMaster();
+//     }
+// };
+
+
+// instrumentOptions.addEventListener("change", (event) => {
+//     currentSound = event.target.value;
+    
+//     synth = changeSound(currentSound)
+// });
+
+
+const membrSynthButton = document.getElementById("membrsynth");
+membrSynthButton.addEventListener("click", () => {
+    freePlay()
+    console.log("This is membrsynth!")
+});
+
 
 const synthButton = document.getElementById("synth");
-synthButton.addEventListener("click", synthPlay);
-
+synthButton.addEventListener("click", () => {
+    synthPlay()
+    console.log("This is the synth!")
+});
 
 
 
