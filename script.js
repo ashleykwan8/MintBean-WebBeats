@@ -16,6 +16,8 @@ let KeyA = document.getElementById("A")
 let KeyAS = document.getElementById("A-sharp")
 let KeyB = document.getElementById("B")
 const synth = new Tone.MembraneSynth().toMaster();
+const newSynth = new Tone.Synth().toMaster();
+
 let now = Tone.now()
 
 
@@ -292,12 +294,86 @@ function freePlay() {
    
 }
 
-// sample code for changing the tones
-// keyboard.addEventListener("change", (event) => {
-//     currentInstrument = event.target.value;
+function synthPlay() {
+    KeyC.addEventListener("mousedown", async () => {
+        newSynth.triggerAttackRelease("C4","10n");
+        
+        //console.log(keyNotes) 
+    });
 
-//     synth = changeInstrument(currentInstrument);
-// });
+
+    KeyCS.addEventListener("mousedown", async () => {
+        newSynth.triggerAttackRelease("C#4", "10n")
+        //console.log(keyNotes)
+
+    });
+
+    KeyD.addEventListener("mousedown", async () => {
+        newSynth.triggerAttackRelease("D4", "10n")
+        //console.log(keyNotes)
+    });
+
+    KeyDS.addEventListener("mousedown", async () => {
+        newSynth.triggerAttackRelease("D#4", "10n")
+        //console.log(keyNotes)
+        
+    });
+
+    KeyE.addEventListener("mousedown", async () => {
+        newSynth.triggerAttackRelease("E4", "10n")
+        //console.log(keyNotes)
+    });
+
+    KeyF.addEventListener("mousedown", async () => {
+        newSynth.triggerAttackRelease("F4", "10n")
+        //console.log(keyNotes)
+    });
+
+    KeyFS.addEventListener("mousedown", async () => {
+        newSynth.triggerAttackRelease("F#4", "10n")
+        //console.log(keyNotes)
+    });
+
+    KeyG.addEventListener("mousedown", async () => {
+        newSynth.triggerAttackRelease("G4", "10n")
+        //console.log(keyNotes)
+    });
+
+
+    KeyGS.addEventListener("mousedown", async () => {
+        newSynth.triggerAttackRelease("G#4", "10n")
+        //console.log(keyNotes)
+    });
+
+
+    KeyA.addEventListener("mousedown", async () => {
+        newSynth.triggerAttackRelease("A4", "10n")
+        //console.log(keyNotes)
+    });
+
+
+    KeyAS.addEventListener("mousedown", async () => {
+        newSynth.triggerAttackRelease("A#4", "10n")
+        //console.log(keyNotes)
+    });
+
+    KeyB.addEventListener("mousedown", async () => {
+        newSynth.triggerAttackRelease("B4", "10n")
+        //console.log(keyNotes)
+    });
+   
+}
+
+// buttons for changing the sounds
+const monoSynthButton = document.getElementById("monosynth");
+monoSynthButton.addEventListener("click", freePlay);
+
+const synthButton = document.getElementById("synth");
+synthButton.addEventListener("click", synthPlay);
+
+
+
+
 
 
 //Create a function to play back the music when user clicks on their Recordings
@@ -308,15 +384,14 @@ function freePlay() {
 // }
 
 
-
 //Start recordings
 myRecordings() 
 
 //No Recordings being made
-freePlay()
+// freePlay()
 
 // changeSound()
-
+// synthPlay()
 
 
 // for (let key in dictRecordings) {
