@@ -385,17 +385,17 @@ function synthPlay() {
 
 
 const membrSynthButton = document.getElementById("membrsynth");
-membrSynthButton.addEventListener("click", () => {
-    freePlay()
-    console.log("This is membrsynth!")
-});
+// membrSynthButton.addEventListener("click", () => {
+//     freePlay()
+//     console.log("This is membrsynth!")
+// });
 
 
 const synthButton = document.getElementById("synth");
-synthButton.addEventListener("click", () => {
-    synthPlay()
-    console.log("This is the synth!")
-});
+// synthButton.addEventListener("click", () => {
+//     synthPlay()
+//     console.log("This is the synth!")
+// });
 
 
 
