@@ -19,6 +19,9 @@ let KeyAS = document.getElementById("A-sharp")
 let KeyB = document.getElementById("B")
 const synth = new Tone.MembraneSynth().toMaster();
 const newSynth = new Tone.Synth().toMaster();
+const synthButton = document.getElementById("synth");
+const membrButton = document.getElementById("membrsynth");
+
 
 let now = Tone.now()
 
@@ -285,6 +288,16 @@ function myRecordings() {
 
 
 function freePlay() {
+
+    // const membrSynthButton = document.getElementById("membrsynth");
+    if (membrButton) {
+        clicked = true;
+        console.log("This membraneButton is", clicked)
+    }
+    else{
+        return;
+    }
+
     KeyC.addEventListener("mousedown", async () => {
         synth.triggerAttackRelease("C4")
         
@@ -355,6 +368,19 @@ function freePlay() {
 }
 
 function synthPlay() {
+
+    // const synthButton = document.getElementById("synth");
+
+    if (synthButton) {
+        clicked = true;
+        console.log("This synthButton is", clicked)
+    }
+    else{
+        return;
+    }
+    
+    
+
     KeyC.addEventListener("mousedown", async () => {
         newSynth.triggerAttackRelease("C4","10n");
         
@@ -445,14 +471,13 @@ function synthPlay() {
 // });
 
 
-const membrSynthButton = document.getElementById("membrsynth");
+
 // membrSynthButton.addEventListener("click", () => {
 //     freePlay()
 //     console.log("This is membrsynth!")
 // });
 
 
-const synthButton = document.getElementById("synth");
 // synthButton.addEventListener("click", () => {
 //     synthPlay()
 //     console.log("This is the synth!")
