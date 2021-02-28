@@ -212,10 +212,14 @@ body {
 .index {
   background-color: #6ddccf;
 }
-.kitty {
+.avatar {
   height: 100px;
   width: 100px;
   margin-bottom: 10px
+}
+.names {
+  clear: both;
+  display: inline-block;
 }
 footer {
   text-align: center;
@@ -238,5 +242,4 @@ footer {
   border-radius: 25px;
   margin-top: 80px;
   margin-bottom: 16px;
-
 }
