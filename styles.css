@@ -207,3 +207,36 @@ body {
 /* .hi {
   margin-top: 500px;
 } */
+
+/* index.html CSS */
+.index {
+  background-color: #6ddccf;
+}
+.kitty {
+  height: 100px;
+  width: 100px;
+  margin-bottom: 10px
+}
+footer {
+  text-align: center;
+}
+.title {
+  background-color: #94ebcd;
+  border-radius: 25px;
+  margin-top: 80px;
+  margin-right: 125px;
+  text-align: center;
+}
+.team  {
+  text-align: center;
+  background-color: #94ebcd;
+  margin-right: 125px;
+  border-radius: 25px;
+}
+#info {
+  background-color: #f8f1f1;
+  border-radius: 25px;
+  margin-top: 80px;
+  margin-bottom: 16px;
+
+}
